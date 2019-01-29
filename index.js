@@ -27,26 +27,10 @@ function addToStock()
         console.log("new Books"+Books);
         render();
         modal.style.display="none";
-  /*      let deleteBtns = document.querySelectorAll('.fa-trash');
-        deleteBtns.forEach(deleteBtn => 
-            deleteBtn.onclick=function(e){
-                console.log(e.target.dataset.index);
-                
-         });
- */
-  /*       let readBtns = document.querySelectorAll('.readToggle,.notreadToggle');
-         readBtns.forEach(readBtn => {
-             readBtn.onclick=function(e){
-                 console.log(e);
-                 toggleBtn(e);
-             }
-         }) */
+        this.form.reset();
     }
     
 }
-
-
-
 
 
 
