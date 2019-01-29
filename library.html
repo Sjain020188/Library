@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="C:\Users\SJain\Desktop\JavaScript\OdinProject\Library\design.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h1>Book Library</h1>
+        <input type="button" id="add" value="ADD BOOKS"></input>
+         <!-- Modal content -->
+         <div id="myModal" class="modal">
+         <div class="modal-content">
+            <span class="close">&times;</span>
+   
+                <div class="addDataForm">
+                    <label for="title">Title</label><input type="text" id="title"></input>
+                    <label for="Author">Author</label><input type="text" id="author"></input>
+                    <label for="Pages">Pages</label><input type="text" id="pages"></input>
+                    
+                    <label for="Status">Status</label><select id="status"><option value="Read">Read</option><option value="Not Read">Not yet Read</option></select>
+                   <input type="button" id="addToStock" value="addtoStock"></input>
+                </div>
+         
+          </div>
+          </div>
+        
+        
+
+        <table>
+                <thead>
+                    <tr>
+                        <td>Title</td>
+                        <td>Author</td>
+                        <td>Pages</td>
+                        <td>Status</td>
+                        <td>Remove</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+    
+        </table>
+    
+       
+
+
+        
+        <script src="C:\Users\SJain\Desktop\JavaScript\OdinProject\Library\index.js"></script>
+    </body>
+</html>
