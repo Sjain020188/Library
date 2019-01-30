@@ -24,6 +24,7 @@ function addToStock()
         console.log(title);
         let book1 = new book(title,author,pages,status);
         Books.push(book1);
+        localStorage.setItem('items', JSON.stringify(Books));
         console.log("new Books"+Books);
         render();
         modal.style.display="none";
@@ -81,6 +82,7 @@ function toggleBtn(e)
         e.target.innerHTML="Read";
         e.target.className="notreadToggle";
      }
+     localStorage.setItem('items', JSON.stringify(Books));
 }
 
 /*function to delete books from stock*/
@@ -94,6 +96,7 @@ function remove(i)
     container.removeChild(row);
     current--;
     i=i+1;
+    
     console.log(`current:${current}    i:${i}`);
     while(i<=current)
     {
@@ -109,8 +112,9 @@ function remove(i)
     console.log("New Books"+Books);
 }
 
-let Books=[];
+let Books=JSON.parse(localStorage.getItem('items')) || [];
 let current=0;
+render();
 //const book1 = new book("Harry Potter","test","200","read");
 //console.log(book1.info());
 const addBtn = document.querySelector('#add');
@@ -146,9 +150,11 @@ tableBody.addEventListener('click',(e)=>{
     {
         remove(parseInt(e.target.dataset.index));
     }
-
+    localStorage.setItem('items', JSON.stringify(Books));
 
 })
+
+
 
 
 
